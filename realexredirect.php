@@ -29,7 +29,7 @@ class RealexRedirect extends PaymentModule
 	{
 		$this->name = 'realexredirect';
 		$this->tab = 'payments_gateways';
-		$this->version = '1.8.1';
+		$this->version = '1.8.2';
 		$this->author = 'Coccinet';
 		$this->bout_valide = $this->l('Pay Now');
 		$this->bout_suppr = $this->l('Do you want to delete your stored card ?');
@@ -1318,7 +1318,7 @@ class RealexRedirect extends PaymentModule
 									'.$this->l('Please click').' <a href="'.$controller_link.'">'.$this->l('here').'</a> '.htmlentities($this->l('to complete your order.')).'
 								</td>';
                         }
-			echo'					
+			echo'
                             </tr>
                             </table>
                             </center>
