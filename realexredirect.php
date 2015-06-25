@@ -1258,7 +1258,7 @@ class RealexRedirect extends PaymentModule
 					{
 						Db::getInstance()->insert('realex_payerref', array(
 						'id_user_realex' => (int)$cart->id_customer,
-						'refuser_realex' => (int)$rv_saved_payer_ref,
+						'refuser_realex' => $rv_saved_payer_ref,
 						'date_add'	=> $date->format('Y-m-d h:i:s')
 						));
 						$id_realex_payerref = Db::getInstance()->Insert_ID();
@@ -1267,7 +1267,7 @@ class RealexRedirect extends PaymentModule
 						$id_realex_payerref = $payer_ref['id_realex_payerref'];
 					Db::getInstance()->insert('realex_paymentref', array(
 						'id_realex_payerref' => (int)$id_realex_payerref,
-						'refpayment_realex' => (int)$rv_saved_payment_ref,
+						'refpayment_realex' => $rv_saved_payment_ref,
 						'paymentname_realex' => pSQL($rv_pmt_digits.' - '.$rv_pmt_exp_format),
 						'type_card_realex' => pSQL($rv_saved_payment_type),
 						'date_add'	=> $date->format('Y-m-d h:i:s')
